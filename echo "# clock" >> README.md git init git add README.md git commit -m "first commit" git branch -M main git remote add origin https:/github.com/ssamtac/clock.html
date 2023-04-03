@@ -1,0 +1,17 @@
+<div id="clock" style="font-family: Arial, sans-serif; font-size: 48px; text-align: center;"></div>
+<script>
+  function updateTime() {
+    // 현재 시간 가져오기
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    // 시간을 화면에 표시하기
+    const clock = document.getElementById("clock");
+    clock.innerText = `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+  }
+
+  // 1초마다 updateTime() 함수 호출하기
+  setInterval(updateTime, 1000);
+</script>
